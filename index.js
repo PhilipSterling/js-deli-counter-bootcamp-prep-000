@@ -2,10 +2,14 @@ function takeANumber(currentLine,name){
   currentLine.push(name)
   return `Welcome, ${name}. You are number ${currentLine.length} in line.`
 }
+var i = 0;
+function takeANumber(line){
+  line.push(++i);
+  return `Welcome, you are number ${i}`
+}
 function nowServing(currentLine) {
-  var temp = currentLine.shift()
   if(currentLine.length > 0){
-  return `Currently serving ${temp}.`}
+  return `Currently serving number ${currentLine.shift()}.`}
   else
   return "There is nobody waiting to be served!"
 }
